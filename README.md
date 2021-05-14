@@ -9,7 +9,7 @@ Terraform 0.13.
 * HPCS instance created and initialized.
 
 ## Example Usage
-* Copy the module decleration from [here](./test/stages/stage0.tf) to the main.tf and variables with their values as in [variable example](./test/stages/stage0.tf) variables.tf files and run the terraform.
+* Copy the module decleration from [here](./test/stages/stage0.tf) to the main.tf and variables with their values as in [variable example](./test/stages/variables.tf) variables.tf files and run the terraform.
 ```hcl
   terraform validate
   terraform init

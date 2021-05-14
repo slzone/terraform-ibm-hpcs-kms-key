@@ -5,7 +5,7 @@ This terraform module creates KMS root key in HPCS instance
 
 Terraform 0.13.
 
-## Prerequizit
+## Prerequisite
 * HPCS instance created and initialized.
 
 ## Example Usage

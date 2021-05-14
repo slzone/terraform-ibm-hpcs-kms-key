@@ -1,5 +1,5 @@
 # terraform-ibm-hpcs-kms-key
-Terraform module to create KMS root key in HPCS instance
+This terraform module creates KMS root key in HPCS instance
 
 ## Terraform versions
 

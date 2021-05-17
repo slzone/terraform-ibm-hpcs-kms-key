@@ -23,7 +23,7 @@ Terraform 0.13.
 
 module "kms_key" {
   # source           = "git::https://github.com/slzone/terraform-ibm-hpcs-kms.key.git"
-  source           = "git::https://github.com/slzone/terraform-ibm-hpcs-kms.key.git?ref=hpcs-kms-dev"
+  source           = "git::https://github.com/slzone/terraform-ibm-hpcs-kms-key.git?ref=hpcs-kms-dev"
   name             = var.name
   standard_key     = var.standard_key
   instance_id      = var.hpcs_instance_guid

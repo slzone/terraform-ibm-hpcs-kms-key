@@ -1,6 +1,6 @@
 module "kms_key" {
-  # source           = "git::https://github.com/slzone/terraform-ibm-hpcs-kms.key.git"
-  source           = "git::https://github.com/slzone/terraform-ibm-hpcs-kms.key.git?ref=hpcs-kms-dev"
+  # source           = "git::ssh://git@github.com/slzone/terraform-ibm-hpcs-kms.key.git"
+  source           = "git::ssh://git@github.com/slzone/terraform-ibm-hpcs-kms-key.git?ref=hpcs-kms-dev"
   ibmcloud_api_key = var.ibmcloud_api_key
   name             = var.name
   standard_key     = var.standard_key

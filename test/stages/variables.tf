@@ -1,11 +1,17 @@
-variable "instance_id" {
-  description = "ID of Service Instance"
+variable "api_key" {
+  type        = string
+  description = "api key of the COS bucket"
+  default     = "yV-sZ18pN_yRmWPI3UxWCFcc7Cd-3MfllxIDlf1Ptno9"
+}
+
+variable "ihpcs_instance_guid" {
+  description = "GUID of Service Instance"
   type        = string
 }
 variable "name" {
   description = "Key Name"
   type        = string
-  default = "root-key"
+  default     = "root-key"
 }
 variable "endpoint_type" {
   description = "Endpoint type of the Key"

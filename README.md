@@ -24,6 +24,7 @@ Terraform 0.13.
 module "kms_key" {
   # source           = "git::https://github.com/slzone/terraform-ibm-hpcs-kms.key.git"
   source           = "git::https://github.com/slzone/terraform-ibm-hpcs-kms-key.git?ref=hpcs-kms-dev"
+  ibmcloud_api_key = var.ibmcloud_api_key
   name             = var.name
   standard_key     = var.standard_key
   instance_id      = var.hpcs_instance_guid
@@ -45,6 +46,7 @@ module "kms_key" {
 
 | Name              | Description                                                             | Type     |Required |
 |-------------------|------------------------------------------------------------------------ |----------|---------|
+| ibmcloud_api_key| Api key.                                               | `string` | Yes     |
 | hpcs_instance_guid| GUID of Service Instance.                                               | `string` | Yes     |
 | region            | Region.                                                                 | `string` | Yes     |   
 | name              | Key Name.                                                               | `string` | Yes     |
@@ -64,3 +66,16 @@ module "kms_key" {
 | Name         | Description     |
 |--------------|-----------------|
 | key          | KMS Key Details.|
+
+
+## Validation Steps: 
+
+* Would be able to see the KMS key details at the end of Terraform apply as:
+
+```hcl
+module.kms_key.null_resource.enable_key_rotaion_policy: Creation complete after 1s [id=1675264934760880326]
+```
+
+* Also can be verified from the IBMCLOUD console as shown:
+
+![here](.kms-key-created)

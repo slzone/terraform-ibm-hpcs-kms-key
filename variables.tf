@@ -1,5 +1,11 @@
-variable "instance_id" {
-  description = "ID of Service Instance"
+variable "ibmcloud_api_key" {
+  type        = string
+  description = "api key of the COS bucket"
+  default     = "yV-sZ18pN_yRmWPI3UxWCFcc7Cd-3MfllxIDlf1Ptno9"
+}
+
+variable "hpcs_instance_guid" {
+  description = "GUID of Service Instance"
   type        = string
 
 }

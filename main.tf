@@ -1,5 +1,5 @@
 resource "ibm_kms_key" "key" {
-  instance_id     = var.instance_id
+  instance_id     = var.hpcs_instance_guid
   key_name        = var.name
   standard_key    = (var.standard_key != null ? var.standard_key : false)
   force_delete    = (var.force_delete != null ? var.force_delete : true)
@@ -23,7 +23,7 @@ resource "ibm_kms_key" "key" {
 resource "null_resource" "enable_key_rotaion_policy" {
   provisioner "local-exec" {
     when    = create
-    command = "/bin/bash scripts/key_rotation_policy.sh"
+    command = "/bin/bash .terraform/modules/kms_key/scripts/key_rotation_policy.sh"
 
     environment = {
       REGION           = var.region

@@ -78,4 +78,4 @@ module.kms_key.null_resource.enable_key_rotaion_policy: Creation complete after 
 
 * Also can be verified from the IBMCLOUD console as shown:
 
-![here](.kms-key-created)
+![here](.kms-key-created.png)

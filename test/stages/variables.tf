@@ -3,7 +3,7 @@ variable "api_key" {
   description = "api key of the COS bucket"
 }
 
-variable "ihpcs_instance_guid" {
+variable "hpcs_instance_guid" {
   description = "GUID of Service Instance"
   type        = string
 }

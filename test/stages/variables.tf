@@ -1,12 +1,8 @@
-variable "api_key" {
+variable "hpcs_instance_guid" {
+  description = "ID of Service Instance"
   type        = string
-  description = "api key of the COS bucket"
 }
 
-variable "hpcs_instance_guid" {
-  description = "GUID of Service Instance"
-  type        = string
-}
 variable "name" {
   description = "Key Name"
   type        = string
@@ -72,4 +68,9 @@ variable "region" {
 variable "hpcs_port" {
   description = "HPCS service port"
   type        = number
+}
+
+variable "ibmcloud_api_key" {
+  type        = string
+  description = "api key of the COS bucket"
 }

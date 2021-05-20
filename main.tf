@@ -27,7 +27,7 @@ resource "null_resource" "enable_key_rotaion_policy" {
 
     environment = {
       REGION           = var.region
-      HPCS_INSTANCE_ID = var.instance_id
+      HPCS_INSTANCE_ID = var.hpcs_instance_guid
       INTERVAL_MONTH   = var.interval_month
       PORT             = var.hpcs_port
     }
